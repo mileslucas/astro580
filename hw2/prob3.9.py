@@ -142,15 +142,17 @@ def getGamma(T, rho, X, Y):
 # Main program below - modify and loop as needed...
 #
 if __name__ == '__main__':
+
     T = [1e4, 1.8e4, 2e4]
     rho = [1e-8, 1e-6, 1e-4]
     X = 1
     Y = 0
-    for t, r in zip(T, rho):
-        print(f'T={t}, rho={r}, X={X}, Y={Y}')
-        print('G1={}, G2={}, G3={}'.format(*getGamma(t, r, X, Y)))
-    X = 0
-    Y = 1
-    for t, r in zip(T, rho):
-        print(f'T={t}, rho={r}, X={X}, Y={Y}')
-        print('G1={}, G2={}, G3={}'.format(*getGamma(t, r, X, Y)))
+    with open('result.txt', 'w') as f:
+        for t, r in zip(T, rho):
+            f.write(f'T={t}, rho={r}, X={X}, Y={Y}\n')
+            f.write('G1={}, G2={}, G3={}\n'.format(*getGamma(t, r, X, Y)))
+        X = 0
+        Y = 1
+        for t, r in zip(T, rho):
+            f.write(f'T={t}, rho={r}, X={X}, Y={Y}\n')
+            f.write('G1={}, G2={}, G3={}\n'.format(*getGamma(t, r, X, Y)))
