@@ -98,7 +98,7 @@
 		\item $\epsilon$ is stellar surface feature parameter
 		\item $\delta_{nl}$ is small separation
 	\end{itemize}
-	In the analysis, the modes $l=0$ where determined to be radial nodes and $l=1, 2$ where most p-like and $l=1$ was individual mixed-mode
+	In the analysis, the modes $l=0$ were determined to be radial nodes and $l=1, 2$ were most p-like and $l=1$ was individual mixed-mode
 }
 \note{
 	Node fitting was done using monte-carlo simulations over the power spectra using $\chi^2$ and lorentzian distributions for the parameters.
@@ -107,34 +107,6 @@
 	\frametitle{Peak-Bagging Result}
 	\includegraphics[width=\linewidth]{figs/peak}
 	Red symbols show where certain modes would be in a best-fitting model of the spectrum. Left frame is primarily g-modes, middle is mixed modes, right is primarily p-modes.
-}
-
-\frame {
-	\frametitle{Stellar Models}
-	MESA models:
-	\begin{itemize}
-		\item $ Y_0 = 0.249$
-		\item $Y_{init}=Y_0+\frac{\Delta Y}{\Delta Z}Z_{init}$
-		\item $X+Y+Z=1$
-	\end{itemize}
-	Overshoot mixing diffusion:
-		$$D_{OV} = D_{conv, 0} \exp\left( {\frac{-2z}{fH_p}}\right) $$
-	Surface correction:
-		$$\delta_{\nu} = \frac{a_{-1} (\nu/\nu_{ac})^{-1} + a_3 (\nu/\nu_{ac})^3}{I}$$
-	Acoustic cutoff:
-		$$ \frac{\nu_{ac}}{\nu_{ac,\odot}}\approx\frac{g}{g_\odot} \left( \frac{T_{eff}}{T_{eff,\odot}}\right)^{-1/2} $$
-}
-
-\frame {
-	\frametitle{Model Parameters Results}
-	\begin{center}
-	\includegraphics[width=.6\linewidth]{figs/parameters}
-
-	\end{center}
-	Model parameters were fit with a (beautiful) bayesian analysis. The parameters determined are show clearly that the mixing length parameter is larger in these red giants than the sun and that the surface correction coefficients are not solar. This mixing length is also 16\% higher than 3d hydrodynamical simulations.
-}
-\note{
-	KIC 7037405 has different distinct results for mass and may have a higher mixing-length parameter
 }
 
 \frame{
@@ -163,10 +135,40 @@
 \frame{
 	\frametitle{Surface Correction Coefficient Correlation}
 	\begin{center}
-	\includegraphics[width=.55\linewidth]{figs/line}
+		\includegraphics[width=.55\linewidth]{figs/line}
 	\end{center}
 	Linear correlation of $a_{-1}$ and $a_3$.
 }
+
+\frame {
+	\frametitle{Stellar Models}
+	MESA models:
+	\begin{itemize}
+		\item $ Y_0 = 0.249$
+		\item $Y_{init}=Y_0+\frac{\Delta Y}{\Delta Z}Z_{init}$
+		\item $X+Y+Z=1$
+	\end{itemize}
+	Overshoot mixing diffusion:
+		$$D_{OV} = D_{conv, 0} \exp\left( {\frac{-2z}{fH_p}}\right) $$
+	Surface correction:
+		$$\delta_{\nu} = \frac{a_{-1} (\nu/\nu_{ac})^{-1} + a_3 (\nu/\nu_{ac})^3}{I}$$
+	Acoustic cutoff:
+		$$ \frac{\nu_{ac}}{\nu_{ac,\odot}}\approx\frac{g}{g_\odot} \left( \frac{T_{eff}}{T_{eff,\odot}}\right)^{-1/2} $$
+}
+
+\frame {
+	\frametitle{Model Parameters Results}
+	\begin{center}
+	\includegraphics[width=.6\linewidth]{figs/parameters}
+
+	\end{center}
+	Model parameters were fit with a (beautiful) bayesian analysis. The parameters determined are show clearly that the mixing length parameter is larger in these red giants than the sun and that the surface correction coefficients are not solar. This mixing length is also 16\% higher than 3D hydrodynamical simulations.
+}
+\note{
+	KIC 7037405 has different distinct results for mass and may have a higher mixing-length parameter
+}
+
+
 \frame {
 	\frametitle{Conclusions}
 	\begin{enumerate}
